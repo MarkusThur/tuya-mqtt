@@ -2,7 +2,7 @@
   "name": "tuya-mqtt",
   "version": "3.1.4",
   "description": "Control Tuya devices locally via MQTT",
-  "homepage": "https://github.com/lehanspb/tuya-mqtt#readme",
+  "homepage": "https://github.com/markusthur/tuya-mqtt#readme",
   "main": "tuya-mqtt.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/lehanspb/tuya-mqtt.git"
+    "url": "git://github.com/markusthur/tuya-mqtt.git"
   }
 }
