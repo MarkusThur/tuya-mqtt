@@ -6,7 +6,7 @@
 
 some infos in here are not 100% correct, but will be corrected soon. This fork is able to detect and forward Zigbee devices behind a Tuya / Smartlife Zigbee gateway and forwart to and from a working MQTT Environment, without the need of having a own Zigbeestick or something like that.
 
-At the current state it does use the "friendly name" of the gateway but the "ID" of the device to do that. Scope of this fork is to get the friendly name as detected by TuyaCLI also to the MQTT System that the device can be accessed via MQTT by 'tuya/zigbee_gateway/<friendly name>/dps/<number of channel>' instead of '/tuya/zigbee_gateway/<local_ID_wild_hex_number>/dps/<number_of_channel>', which works already in the variant this is forked from.
+At the current state it does use the "friendly name" of the gateway but the "ID" of the device to do that. Scope of this fork is to get the friendly name as detected by TuyaCLI also to the MQTT System that the device can be accessed via MQTT by 'tuya/zigbee_gateway/<friendly_name>/dps/<number of channel>' instead of '/tuya/zigbee_gateway/<local_ID_wild_hex_number>/dps/<number_of_channel>', which works already in the variant this is forked from.
 
 I forked this repository [lehanspb] (https://github.com/lehanspb/tuya-mqtt) and am changing for scope above.
 
