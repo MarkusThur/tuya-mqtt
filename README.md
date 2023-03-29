@@ -8,8 +8,11 @@ some infos in here are not 100% correct, but will be corrected soon. This fork i
 
 At the current state it does use the "friendly name" of the gateway but the "ID" of the device to do that. Scope of this fork is to get the friendly name as detected by TuyaCLI also to the MQTT System that the device can be accessed via MQTT by 
 'tuya/zigbee_gateway/<friendly_name>/dps/<number_of_channel>'
+
 instead of
+
 '/tuya/zigbee_gateway/<local_ID_wild_hex_number>/dps/<number_of_channel>'
+
 , which works already in the variant this is forked from.
 
 I forked this repository [lehanspb] (https://github.com/lehanspb/tuya-mqtt) and am changing for scope above.
