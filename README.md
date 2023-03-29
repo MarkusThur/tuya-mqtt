@@ -2,11 +2,13 @@
 
 # Note
 
-I'm not a developer and I'm new to nodejs.
+!!!under work for this fork!!!
 
-I just need to get data from Zigbee devices behind Tuya Wireless Gateway and the ability to control them using MQTT commands.
+some infos in here are not 100% correct, but will be corrected soon. This fork is able to detect and forward Zigbee devices behind a Tuya / Smartlife Zigbee gateway and forwart to and from a working MQTT Environment, without the need of having a own Zigbeestick or something like that.
 
-I forked this repository [TheAgentK](https://github.com/TheAgentK/tuya-mqtt) and made some changes.
+At the current state it does use the "friendly name" of the gateway but the "ID" of the device to do that. Scope of this fork is to get the friendly name as detected by TuyaCLI also to the MQTT System that the device can be accessed via MQTT by 'tuya/zigbee_gateway/<friendly name>/dps/<number of channel>' instead of '/tuya/zigbee_gateway/<local_ID_wild_hex_number>/dps/<number_of_channel>', which works already in the variant this is forked from.
+
+I forked this repository [lehanspb] (https://github.com/lehanspb/tuya-mqtt) and am changing for scope above.
 
 # About
 This project is a bridge that allows locally controlling IOT devices manufactured by Tuya Inc., and sold under many different brands, via simple MQTT topics. It effectively translate the Tuya protocol to easy to use topics.
@@ -24,7 +26,7 @@ Download this project to your system into any directory (example below uses /opt
 cd /opt
 
 // clone this project
-git clone https://github.com/lehanspb/tuya-mqtt
+git clone https://github.com/markusthur/tuya-mqtt
 
 // change directory to the project directory
 cd tuya-mqtt
@@ -96,6 +98,8 @@ for full debugging
 ### Systemd script for Debian-like OS
 
 Just create file /etc/systemd/system/tuya-mqtt.service
+  
+take care about the path variable in this config. Many instructions do not set all neccessary pathes, depending on your distribution of Linux. This should hit all potential pathes, but may be too much for your system.. In case look at your PATH variable in the shell and identify what exactly u need or don't need.
 
 ```
 [Unit]
@@ -107,7 +111,7 @@ Just create file /etc/systemd/system/tuya-mqtt.service
  Restart=always
  User=openhab
  Group=openhab
- Environment=PATH=/usr/bin/
+ Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
  Environment=NODE_ENV=production
  WorkingDirectory=/opt/tuya-mqtt/
  
